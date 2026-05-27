@@ -14,6 +14,118 @@
         "SKILL.md": "sha256:6a93e68b5d843ab6da3290dfe81cfdf26de166be7f3feca5acb52744f63db593"
       }
     },
+    "cmux": {
+      "source": "github.com/manaflow-ai/cmux/skills/cmux",
+      "type": "github-subdir",
+      "installed_at": "2026-05-27T16:06:30.979814+09:00",
+      "repo_url": "https://github.com/manaflow-ai/cmux.git",
+      "subdir": "skills/cmux",
+      "version": "3b1fe70",
+      "tree_hash": "d7b4a428df22553048a6830f4b5f3733fe1f9393",
+      "file_hashes": {
+        "SKILL.md": "sha256:890e0ceb19923bff004d189cb499a7ed1356c6fbe18292edca48c7a092371393",
+        "agents/openai.yaml": "sha256:7efa5af3c070a391d7477d065f150aaf8305dd2e18994cbe5e54b0fae83a7681",
+        "references/handles-and-identify.md": "sha256:c8186c8e8b7616e3b196eb82f39eedddc53882a0deab1ada807ac4303a91a36b",
+        "references/panes-surfaces.md": "sha256:40e3e8db79919a0cec22a45589485fc9a4ad1abfb9d8136d133be66f423d9266",
+        "references/trigger-flash-and-health.md": "sha256:4a9666a398e1285eda72454442a62fb99ef7d300b13a108f960b8821c01507b0",
+        "references/windows-workspaces.md": "sha256:ec84fc1c437320234ba8192c43e173910ea44dc77dd47d5229c37c95ca5c07bd"
+      }
+    },
+    "cmux-browser": {
+      "source": "github.com/manaflow-ai/cmux/skills/cmux-browser",
+      "type": "github-subdir",
+      "installed_at": "2026-05-27T16:06:37.120599+09:00",
+      "repo_url": "https://github.com/manaflow-ai/cmux.git",
+      "subdir": "skills/cmux-browser",
+      "version": "3b1fe70",
+      "tree_hash": "6d5dfc4de15faae37f932fa71f2bc9943bd2dafe",
+      "file_hashes": {
+        "SKILL.md": "sha256:3dea0af2946c156fc9be29fe438e33d3124e9811207b59d78b6033e03d269b74",
+        "agents/openai.yaml": "sha256:cdaa4e8dda292db314c5e5f5ab8975635be039b8876dfd9c41c098da302f59e5",
+        "references/authentication.md": "sha256:b1282e8454e5bcd469fcbc6a5dc5e9eea04544add10ec0aa0290a9dbc2219eae",
+        "references/commands.md": "sha256:e4028daeca7d6ea62795aab035e233bf8d1f6f1fdb70a4077b1aeb4f1ca5122b",
+        "references/proxy-support.md": "sha256:68bf4eead7c099773cae8ebb1276ea21476627eac63675601ac0400bea9183e1",
+        "references/session-management.md": "sha256:9f13666b31ac8b0032fc1932b48a72701894e8c7f17d73aa7edd4341036eb696",
+        "references/snapshot-refs.md": "sha256:f9ba1bc73f239dbb884287203c5f472a8096c3426efb2617675067625f58dfec",
+        "references/video-recording.md": "sha256:6dbc8e248902bd0c35b885fcc99f504ff733351f616947e6dd7afe4d3647498d",
+        "templates/authenticated-session.sh": "sha256:138ddd070519092f38b21c1e72206d901e726610d205a34e9a93bc3efb2888df",
+        "templates/capture-workflow.sh": "sha256:339d9de6320dfaae72534d36f0b7d5476b12a2ba9c95f0e2f74960e72cf49ca2",
+        "templates/form-automation.sh": "sha256:6ec05ca74e999688ea2455c1e4d11f37e426cee9604ece7b2cacfbdfe44a3506"
+      }
+    },
+    "cmux-customization": {
+      "source": "github.com/manaflow-ai/cmux/skills/cmux-customization",
+      "type": "github-subdir",
+      "installed_at": "2026-05-27T16:07:07.298513+09:00",
+      "repo_url": "https://github.com/manaflow-ai/cmux.git",
+      "subdir": "skills/cmux-customization",
+      "version": "3b1fe70",
+      "tree_hash": "47bb4ea3d247fe634734674ec3d39e1224aed0e1",
+      "file_hashes": {
+        "SKILL.md": "sha256:8ed1c3435d36c2673565d5bfb9a45b4e82ea2c9bab1a708854d9f91673ce6450",
+        "agents/openai.yaml": "sha256:eea84547356e78f52016a174a3e944b62577a3dc7a5abed3221026164c97b01e",
+        "references/examples.md": "sha256:b6dc9d0d530e71394c24a60a2f1a2d03898c13f7e8c45f6743a27a8acc1b91ec"
+      }
+    },
+    "cmux-diagnostics": {
+      "source": "github.com/manaflow-ai/cmux/skills/cmux-diagnostics",
+      "type": "github-subdir",
+      "installed_at": "2026-05-27T16:07:00.991587+09:00",
+      "repo_url": "https://github.com/manaflow-ai/cmux.git",
+      "subdir": "skills/cmux-diagnostics",
+      "version": "3b1fe70",
+      "tree_hash": "bbcedcd6e38891c7a2c0493e397d2c3ddf3d8633",
+      "file_hashes": {
+        "SKILL.md": "sha256:315bab38550d5854a7529fdd2f6a2b0c7286e9fe2e688b292365b2eb74076891",
+        "agents/openai.yaml": "sha256:3aed2dabf774d0e1d3ebada50a3b968c1dc8d1ad6ee1bbf732e9175cdfe3a074",
+        "scripts/cmux-diagnostics": "sha256:a31298f444b6315975f17a95810159ca308e69cc45c05cb85a595e9422461ef3"
+      }
+    },
+    "cmux-markdown": {
+      "source": "github.com/manaflow-ai/cmux/skills/cmux-markdown",
+      "type": "github-subdir",
+      "installed_at": "2026-05-27T16:06:43.316789+09:00",
+      "repo_url": "https://github.com/manaflow-ai/cmux.git",
+      "subdir": "skills/cmux-markdown",
+      "version": "3b1fe70",
+      "tree_hash": "c6cf70a1ad9f98867a652dc03ded80905c2706c8",
+      "file_hashes": {
+        "SKILL.md": "sha256:b5e5abbee4557bce296c51488d4b747bfd57c83d05a2a3faaaa5f531fd77d2a2",
+        "agents/openai.yaml": "sha256:fb6ae24128e30cd45bd14c36655af33112acb0fa4bd4a64d1043954f553231b5",
+        "references/commands.md": "sha256:7c7bb4977169e998332d57d1a7ffe9f0f66d1621601d58213fccee17536a8554",
+        "references/live-reload.md": "sha256:fd100c8c096991605e466c80eabb4058b946d9107822fd6a6396bc67e85132f0"
+      }
+    },
+    "cmux-settings": {
+      "source": "github.com/manaflow-ai/cmux/skills/cmux-settings",
+      "type": "github-subdir",
+      "installed_at": "2026-05-27T16:06:49.445627+09:00",
+      "repo_url": "https://github.com/manaflow-ai/cmux.git",
+      "subdir": "skills/cmux-settings",
+      "version": "3b1fe70",
+      "tree_hash": "7c3ee4ce0e05ea8178dadc28c25b16938f8be3f1",
+      "file_hashes": {
+        "SKILL.md": "sha256:84b744c8ccc68a2cd5cfefa38faf0c5939bd69ef135ea4374b33d4f0234ef11f",
+        "agents/openai.yaml": "sha256:3e6713f9c335147fbbcb04d3d50f3f994c97e915d4af2f315d8fb51f4a4f336f",
+        "references/all-keys.md": "sha256:83d2909450d804da5efb1f1465ee3cc4f64726e9c6039e99269fc27c568f6f07",
+        "references/shortcut-actions.md": "sha256:1b174d2b29a18a0d1d608f2ac1b74d35462989534695dbdbd34db6713e90c640",
+        "scripts/cmux-settings": "sha256:82555b970584c7072bb046ad4a4e02b81630d553e41dbda34d6710b0af843bb3"
+      }
+    },
+    "cmux-workspace": {
+      "source": "github.com/manaflow-ai/cmux/skills/cmux-workspace",
+      "type": "github-subdir",
+      "installed_at": "2026-05-27T16:06:55.278933+09:00",
+      "repo_url": "https://github.com/manaflow-ai/cmux.git",
+      "subdir": "skills/cmux-workspace",
+      "version": "3b1fe70",
+      "tree_hash": "b8a24863c44d8233c1c9ed760fe91876c8265321",
+      "file_hashes": {
+        "SKILL.md": "sha256:5f8c0b41951b0ac906167f16d015ca708c39fe878f27e504f322e237ca61ed12",
+        "agents/openai.yaml": "sha256:fb505a3163fb9f9aba2fb4a8f14e5b5956f9ba927f3a2fb51b23585eed5c7d80",
+        "references/commands.md": "sha256:976f3226c1e13c3be50da601842512bf7ab052379e5c8ffc452e19bf34021313"
+      }
+    },
     "frontend-design": {
       "source": "github.com/anthropics/skills/skills/frontend-design",
       "type": "github-subdir",
