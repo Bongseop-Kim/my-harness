@@ -1,10 +1,35 @@
 {
   "version": 1,
   "entries": {
+    "caveman": {
+      "source": "github.com/JuliusBrussee/caveman/skills/caveman",
+      "type": "github-subdir",
+      "installed_at": "2026-05-27T13:54:42.271901+09:00",
+      "repo_url": "https://github.com/JuliusBrussee/caveman.git",
+      "subdir": "skills/caveman",
+      "version": "655b7d9",
+      "tree_hash": "75b63aa9ec7bbb0e72bb6b3524ff6b576c14a05a",
+      "file_hashes": {
+        "README.md": "sha256:95b62190565e0d5b21ced563cf36c0f549abe1ceceff540914102481c9c5849c",
+        "SKILL.md": "sha256:6a93e68b5d843ab6da3290dfe81cfdf26de166be7f3feca5acb52744f63db593"
+      }
+    },
+    "karpathy-guidelines": {
+      "source": "github.com/multica-ai/andrej-karpathy-skills/skills/karpathy-guidelines",
+      "type": "github-subdir",
+      "installed_at": "2026-05-27T13:54:43.552101+09:00",
+      "repo_url": "https://github.com/multica-ai/andrej-karpathy-skills.git",
+      "subdir": "skills/karpathy-guidelines",
+      "version": "2c60614",
+      "tree_hash": "e119339197d600aa39a24fd7a95c946800c9c949",
+      "file_hashes": {
+        "SKILL.md": "sha256:6e22cc54cb02a5e98ae42d06d9d7292db0c1b43894831b32879beb0166b2aea7"
+      }
+    },
     "skillshare": {
       "source": "github.com/runkids/skillshare/skills/skillshare",
       "type": "github-subdir",
-      "installed_at": "2026-05-27T10:37:55.870639+09:00",
+      "installed_at": "2026-05-27T13:54:44.867428+09:00",
       "repo_url": "https://github.com/runkids/skillshare.git",
       "subdir": "skills/skillshare",
       "version": "e02b207",
