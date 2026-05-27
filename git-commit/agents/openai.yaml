@@ -1,0 +1,4 @@
+interface:
+  display_name: "Git Commit"
+  short_description: "Create one commit from current git changes"
+  default_prompt: "Use $git-commit to inspect the current diff and create a single commit."
