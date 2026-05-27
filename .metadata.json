@@ -1,6 +1,25 @@
 {
   "version": 1,
   "entries": {
+    "brainstorming": {
+      "source": "github.com/obra/superpowers/skills/brainstorming",
+      "type": "github-subdir",
+      "installed_at": "2026-05-27T14:48:50.097886+09:00",
+      "repo_url": "https://github.com/obra/superpowers.git",
+      "subdir": "skills/brainstorming",
+      "version": "f2cbfbe",
+      "tree_hash": "f260c775073816860fef8a37c032ac77e2ff5821",
+      "file_hashes": {
+        "SKILL.md": "sha256:bba47904a7f6bbee3bf8a107ebbe84e65d392be683bbb898ded736b29e415f90",
+        "scripts/frame-template.html": "sha256:fb22ba9d47f3b83b56e0a95d52a3c2727db03b0d4365078d92c850293a62457b",
+        "scripts/helper.js": "sha256:e763d82f32b4ebb320be2f0d08449d3e5a0585778edf5c407c1fdab3f39976a5",
+        "scripts/server.cjs": "sha256:ea81185f581897c67d4b417eeb9bc7a158c50e0932c73047054fe53efc2683ef",
+        "scripts/start-server.sh": "sha256:3442a54b5ee5511637d27bf696e092b72f94c2324f40b5ba4410da4dd0c23bc8",
+        "scripts/stop-server.sh": "sha256:f65b7634a27343eab2086bdb6c59ba78695685f471b5a577b08a8817f7c50600",
+        "spec-document-reviewer-prompt.md": "sha256:12cb5ed58aef41b8da6fbb505547c71ca3f5658c83b66ca6e556c936308b3189",
+        "visual-companion.md": "sha256:a2bc6fc47d0df1df981d02f707a16225b147f462e7059175ad2bc5e6dd29fcae"
+      }
+    },
     "caveman": {
       "source": "github.com/JuliusBrussee/caveman/skills/caveman",
       "type": "github-subdir",
@@ -14,6 +33,19 @@
         "SKILL.md": "sha256:6a93e68b5d843ab6da3290dfe81cfdf26de166be7f3feca5acb52744f63db593"
       }
     },
+    "frontend-design": {
+      "source": "github.com/anthropics/skills/skills/frontend-design",
+      "type": "github-subdir",
+      "installed_at": "2026-05-27T14:46:52.182412+09:00",
+      "repo_url": "https://github.com/anthropics/skills.git",
+      "subdir": "skills/frontend-design",
+      "version": "690f15c",
+      "tree_hash": "928950704df8a8b885c03de5da626331e6f29cf8",
+      "file_hashes": {
+        "LICENSE.txt": "sha256:0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+        "SKILL.md": "sha256:b81e2ff87ed8fa4d6c377ccb127a7254c9e6a77e3ae94f21e6b514f7bb2945a0"
+      }
+    },
     "karpathy-guidelines": {
       "source": "github.com/multica-ai/andrej-karpathy-skills/skills/karpathy-guidelines",
       "type": "github-subdir",
@@ -24,6 +56,95 @@
       "tree_hash": "e119339197d600aa39a24fd7a95c946800c9c949",
       "file_hashes": {
         "SKILL.md": "sha256:6e22cc54cb02a5e98ae42d06d9d7292db0c1b43894831b32879beb0166b2aea7"
+      }
+    },
+    "react-components": {
+      "source": "github.com/google-labs-code/stitch-skills/plugins/stitch-build/skills/react-components",
+      "type": "github-subdir",
+      "installed_at": "2026-05-27T14:46:02.545764+09:00",
+      "repo_url": "https://github.com/google-labs-code/stitch-skills.git",
+      "subdir": "plugins/stitch-build/skills/react-components",
+      "version": "53f15d8",
+      "tree_hash": "362ab0e46d56e2c6aacce5f58a73daf34e181a11",
+      "file_hashes": {
+        "README.md": "sha256:f000ddbcecffe54f5615b61ccc796a7b01305e95283f8c03f0d025c576b8bab9",
+        "SKILL.md": "sha256:d7d97de6990bda48bbc8130a681b5d526c141c1042bbf7a269be8c0b1567ec84",
+        "examples/gold-standard-card.tsx": "sha256:c7b168b1ad6e81dbdb06a5a1cc9e4598f14c97abfbb0d15cfe36b3f4152ac4b2",
+        "package-lock.json": "sha256:db75fd36cd675a30d144138d4711b74429bffca81cb4cd75b866d6cdafd6e4c9",
+        "package.json": "sha256:937a3476dceff2386e7828962f926bccdf4f936b4fa727703082ee7d0e8083bd",
+        "resources/architecture-checklist.md": "sha256:55c3407f307d557d3bd35eb3d653a18c6b2977f38efc71f6c33192ce37159c32",
+        "resources/component-template.tsx": "sha256:9d6edbca16724ebe83084ea8bb4ef0c03cace3c1773ee1b693412ac4efc30579",
+        "resources/stitch-api-reference.md": "sha256:f7cd8515705dcff420e40ee69609990b12c5e2c2c1489cea10244f177af31624",
+        "resources/style-guide.json": "sha256:9ac47e30d145bba43af7959e70cf1d8b96ba8b0e07a860ef98b1e05d50ced712",
+        "scripts/fetch-stitch.sh": "sha256:2b5939b68289d1eca1a616e7c4a4cbe6de09010941bb7756348d75509e5ef0ff",
+        "scripts/validate.js": "sha256:2d2a9335b12be5da3d86e936b9bbb013808cb294e39af834bc1e1b41177e61d2"
+      }
+    },
+    "react-doctor": {
+      "source": "github.com/millionco/react-doctor/skills/react-doctor",
+      "type": "github-subdir",
+      "installed_at": "2026-05-27T14:43:34.598912+09:00",
+      "repo_url": "https://github.com/millionco/react-doctor.git",
+      "subdir": "skills/react-doctor",
+      "version": "68e7b80",
+      "tree_hash": "a0f9e68cf806ed5cc58b1ad2493b2e51d335c08b",
+      "file_hashes": {
+        "SKILL.md": "sha256:e1f696bcaa4841f00109cc1b3bbb2c3a2d059098fd6a815a1791e35e90480652"
+      }
+    },
+    "react-native-best-practices": {
+      "source": "github.com/callstackincubator/agent-skills/skills/react-native-best-practices",
+      "type": "github-subdir",
+      "installed_at": "2026-05-27T14:45:17.668059+09:00",
+      "repo_url": "https://github.com/callstackincubator/agent-skills.git",
+      "subdir": "skills/react-native-best-practices",
+      "version": "a5c8f21",
+      "tree_hash": "8fdaa2fb3a03ce006d529c06ec17a33c9f55d893",
+      "file_hashes": {
+        "POWER.md": "sha256:3f5e3d24c8f20f380d5598711d6d7143384e8229f3a66b1e074df478cf9efc78",
+        "SKILL.md": "sha256:977bdb91ea09f112628a07b36800527c466d96c04804cdc574e67b32cf0d8c98",
+        "agents/openai.yaml": "sha256:13d867840f5d10f87256653bc71da8de508ad13b10fd6931e1eb29cdd8ceb9e6",
+        "references/bundle-analyze-app.md": "sha256:36621b28a077cfb5563b03cfdf926312f984543379b52ae1cc744d625a13b261",
+        "references/bundle-analyze-js.md": "sha256:325e8c556977926cf0ed32a3273f078ffd3eb006879a1e95bc2007f7596d0e45",
+        "references/bundle-barrel-exports.md": "sha256:6e7f0fcb12d629cda5604813ffd5b937b203a04256057ff3f821af81af471b1f",
+        "references/bundle-code-splitting.md": "sha256:d4bb4deb620377bd5dc5933f660e23f8800cbe1f6a2ae18dd87b961993ee2c15",
+        "references/bundle-hermes-mmap.md": "sha256:357633769883e6a3d25bfec7623ede383713b874da1bca12f62d371ac154a7d4",
+        "references/bundle-library-size.md": "sha256:1ee3d02de580751202aedb735856fd9a271bf234b34d65f0b03ec63fa8dfd5bd",
+        "references/bundle-native-assets.md": "sha256:e2bc25a34535ba4c55d1fd46d9237bfa01601f17ccc7b2810cb85d56be53978a",
+        "references/bundle-r8-android.md": "sha256:62f2b02eb8d29084d8f99bd0875c9143c728605a80c77e71aae7539da38dce11",
+        "references/bundle-tree-shaking.md": "sha256:c567ad9d09d6c53fe46fe7d7aebc8624ef99c9cc66741c92b8fb8c52ea3947f4",
+        "references/images/bundle-treemap-source-map-explorer.png": "sha256:280495fc828cde33b0c1a83a02031d3ab484c0af240ab6fc408a313aa445fd3b",
+        "references/images/controlled-textinput-pingpong.png": "sha256:883cc345490473110ce93536a39c224f692229f691da1203b084488569f48781",
+        "references/images/devtools-flamegraph.png": "sha256:b257c6dbf4304aa6e2ca40ec357a13441cfa2f3cb84d5653af56484861a63c94",
+        "references/images/emerge-xray-ios.png": "sha256:41d00a6e90e89bcc941daa41ad2bfc742e3817e421b4cd6e42fb7f43d304c3b2",
+        "references/images/expo-atlas-treemap.png": "sha256:3e4ef5894d949f0e6a445329b33e3346dc8bded3855e18afe500584cd4c761a2",
+        "references/images/flashlight-flatlist-vs-flashlist.png": "sha256:a9e57f2673669bed947e57c121ad85088e237f462362382008b3bb46570c72ca",
+        "references/images/fps-drop-graph.png": "sha256:bb43718e87b140307e37d66dc2a5332e882881c4f8a14629b96072913b2ca580",
+        "references/images/memory-heap-snapshot.png": "sha256:0cd36795ce16814717cad712b744ad4e523e1acef95263a3b49a8bb24ede8bad",
+        "references/images/tti-warm-start-diagram.png": "sha256:6fc7cbf22a8ce657fe8d31978e7adfec24cd88a9a58c3d2a302f86fb64ff6a8e",
+        "references/images/view-hierarchy-flattening.png": "sha256:9edaac44f464730d3f5b6c2c0ccd19d2edf24fa358b4470c6ebc4a37b61753d7",
+        "references/images/xcode-instruments-templates.png": "sha256:5d864f068bb1dc5edf9586a557260aa0f27b2b6fc96e473d8d5a8b3c2c1e836b",
+        "references/images/xcode-thread-view.png": "sha256:f3e7b75b87ce445e36293fcac070eecdb0609557fffb98a8cd000bcbe3e1b921",
+        "references/js-animations-reanimated.md": "sha256:7035bb2540e49fef3b00635ebac5300571b13b4e71bb832311da058f49d50ab7",
+        "references/js-atomic-state.md": "sha256:b2f5078777866a9121bef2bcfda584082a1492a61b61639708a5701bca6be818",
+        "references/js-bottomsheet.md": "sha256:9323588c03890959ab034c1808230f2866be081c096d4a56101d9ab96f3ce778",
+        "references/js-concurrent-react.md": "sha256:e6d2de49d14309720f7fb3f286a991a520e5075797a4ac5f486256fc28adbd4c",
+        "references/js-lists-flatlist-flashlist.md": "sha256:a4137a0d895bd2c3662aef624d72d7ef2dda09f17f6f7ecd64e4648a8c89c1bd",
+        "references/js-measure-fps.md": "sha256:10ac88f3b9802d350015c8bf7c0c172ff6207a444596cbe96741799a43479554",
+        "references/js-memory-leaks.md": "sha256:48a76bd58f98adef8548dc80d031ba54332cb62a20f1c77678acd0d7954feef3",
+        "references/js-profile-react.md": "sha256:b593464fc34ccb3a166a0fc5ff53450cc9c64f07f98773665da89201c57ef8d7",
+        "references/js-react-compiler.md": "sha256:0cedfaa5321e9e9df30b61533d54b73c1ffbe3a67d73206470e00b552eee49ab",
+        "references/js-uncontrolled-components.md": "sha256:8ff1936602cde920b7fb9c87cecd97ffeb7bf30190cffbd326f697aa01fd21f6",
+        "references/native-android-16kb-alignment.md": "sha256:4de35d380bb25d25be30b021ae8c3b511838cf59ef54a84a96dd96c7c6ba52f6",
+        "references/native-measure-tti.md": "sha256:9c791cb61794f43505153a19a9457e3555618a04d64b10eb8541d1f9062888fe",
+        "references/native-memory-leaks.md": "sha256:b2f5e4b045688e2d9cd7263d0f9f7144842c002a02ede2de99fe8f5f357ed58a",
+        "references/native-memory-patterns.md": "sha256:266f33e99a73e16902eea08d6b91299144464e13e52bcc70a52595e37b51cc08",
+        "references/native-platform-setup.md": "sha256:86cb29780159996955174c01f03bb25f45f42ccc2b4e2c9455b30f3173b5d7e6",
+        "references/native-profiling.md": "sha256:f8e8d8c05b9f167cca359f32de4fd0682bd6e19ef968826eab4803dd0628e23e",
+        "references/native-sdks-over-polyfills.md": "sha256:caa6473172a7f846be17cd8d9dafc3165494381d4d315ce1d3d44cb1c2338ee2",
+        "references/native-threading-model.md": "sha256:3d07296b24f3e023863289aabcea032253ee9d7dd482a09167a4cf647221067b",
+        "references/native-turbo-modules.md": "sha256:1227ee16a1bd882c3f20349a15543ce2ac3bc6069ff746409d3ef1715576f425",
+        "references/native-view-flattening.md": "sha256:25f2570e79e5af1e6d14e0932adc462bcabfef46201acb2bc1c48e1f5ce123b1"
       }
     },
     "skillshare": {
