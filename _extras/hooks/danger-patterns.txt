@@ -1,0 +1,37 @@
+# danger-patterns.txt
+# pre-bash-guard.sh 가 Bash 명령에 대해 매칭하는 차단/허용 패턴.
+# 형식: 한 줄에 한 패턴. '#' 로 시작하는 줄과 빈 줄은 무시.
+# 매칭은 모두 grep -E (확장 정규식). 명령 문자열 전체에 대해 매칭.
+#
+# 카테고리:
+#   [ALLOW]  — 안전 경로 화이트리스트. 매칭되면 즉시 통과 (다른 패턴보다 우선)
+#   [SECRET] — 시크릿 파일 접근. 매칭되면 exit 2 (차단)
+#   [DANGER] — 위험 명령. 매칭되면 exit 2 (차단)
+#
+# 추가/수정 후 hook 재시작 불필요 — 매 호출 시 다시 읽음.
+#
+# ⚠️ 셸 토큰 우회 (공백 변형, 변수 indirection, base64 디코드 후 eval 등) 가능.
+#    안전망 성격으로 사용할 것. 진짜 방어선은 pre-commit / CI 단계.
+
+# === [ALLOW] 안전 경로 화이트리스트 (DANGER 매칭보다 우선) ===
+[ALLOW] rm[[:space:]]+(-[a-zA-Z]*r[a-zA-Z]*f|-[a-zA-Z]*f[a-zA-Z]*r)[[:space:]]+(~/|\$HOME/|\$\{HOME\}/)\.(config|cache|local|tmp)(/|$|[[:space:]])
+[ALLOW] rm[[:space:]]+(-[a-zA-Z]*r[a-zA-Z]*f|-[a-zA-Z]*f[a-zA-Z]*r)[[:space:]]+/tmp/
+[ALLOW] rm[[:space:]]+(-[a-zA-Z]*r[a-zA-Z]*f|-[a-zA-Z]*f[a-zA-Z]*r)[[:space:]]+/private/tmp/
+[ALLOW] rm[[:space:]]+(-[a-zA-Z]*r[a-zA-Z]*f|-[a-zA-Z]*f[a-zA-Z]*r)[[:space:]]+/var/folders/
+
+# === [SECRET] 시크릿 파일 접근 (cat/cp/mv/tee/head/tail/less/more/bat + redirect) ===
+[SECRET] (cat|less|more|head|tail|bat|cp|mv|tee)[[:space:]]+.*(\.env($|[[:space:]])|\.env\.[A-Za-z0-9._-]+)
+[SECRET] (cat|less|more|head|tail|bat|cp|mv|tee)[[:space:]]+.*(credentials[A-Za-z0-9._-]*\.json|service-account[A-Za-z0-9._-]*\.json|firebase-adminsdk[A-Za-z0-9._-]*\.json)
+[SECRET] (cat|less|more|head|tail|bat|cp|mv|tee)[[:space:]]+.*(\.pem|\.key|\.keystore|\.jks)($|[[:space:]])
+[SECRET] (cat|less|more|head|tail|bat|cp|mv|tee)[[:space:]]+.*(/\.aws/credentials|/\.aws/config|/\.ssh/id_|/\.ssh/[A-Za-z0-9._-]*\.pem|/\.gnupg/|/\.netrc|/\.npmrc)
+[SECRET] (cat|less|more|head|tail|bat|cp|mv|tee)[[:space:]]+.*/src/main/resources/prod/
+[SECRET] >[[:space:]]*[^|&;]*(\.env($|[[:space:]])|\.env\.|\.pem|\.key|\.keystore|\.jks|credentials[A-Za-z0-9._-]*\.json|service-account[A-Za-z0-9._-]*\.json|firebase-adminsdk[A-Za-z0-9._-]*\.json)
+
+# === [DANGER] 위험 명령 ===
+[DANGER] rm[[:space:]]+(-[a-zA-Z]*r[a-zA-Z]*f|-[a-zA-Z]*f[a-zA-Z]*r)[[:space:]]+(/|~|\$HOME|\$\{HOME\})
+[DANGER] rm[[:space:]]+(-[a-zA-Z]*r[a-zA-Z]*f|-[a-zA-Z]*f[a-zA-Z]*r)[[:space:]]+\.\.?($|[[:space:]])
+[DANGER] git[[:space:]]+push.*--force.*(\bmain\b|\bmaster\b)
+[DANGER] git[[:space:]]+push.*-f[[:space:]].*(\bmain\b|\bmaster\b)
+[DANGER] git[[:space:]]+reset[[:space:]]+--hard[[:space:]]+origin
+[DANGER] npm[[:space:]]+publish($|[[:space:]])
+[DANGER] :\(\)\{[[:space:]]*:\|:&[[:space:]]*\};:

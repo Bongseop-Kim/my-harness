@@ -1,0 +1,29 @@
+{
+  "userPromptSubmit": [
+    {
+      "skill": "karpathy-guidelines",
+      "patterns": ["리팩토", "리뷰", "버그", "함수", "클래스"],
+      "reminder": "이 작업에 karpathy-guidelines 원칙(수술적 변경, 과잉 구현 방지, 가정 명시, 검증 가능한 성공 기준) 적용"
+    },
+    {
+      "skill": "react-doctor",
+      "patterns": ["doctor", "스캔", "진단", "triage", "헬스 체크"],
+      "reminder": "react-doctor 스킬로 진단 실행 (npx react-doctor@latest --verbose)"
+    },
+    {
+      "skill": "web-design-guidelines",
+      "patterns": ["접근성", "a11y", "디자인 리뷰", "UX 리뷰", "타이포", "레이아웃"],
+      "reminder": "UI 작업 — web-design-guidelines 스킬로 접근성·UX·일관성 자체 검수"
+    },
+    {
+      "skill": "code-simplifier",
+      "patterns": ["리팩토", "단순화", "깔끔하게", "simplify", "cleanup", "clean up"],
+      "reminder": "code-simplifier 스킬 활성화 — 기능 보존 + 가독성·일관성 개선"
+    },
+    {
+      "skill": "composition-patterns",
+      "patterns": ["컴포넌트 설계", "boolean prop", "render prop", "compound", "HOC", "재사용 컴포넌트"],
+      "reminder": "React 컴포넌트 설계 — composition-patterns 스킬로 boolean prop 폭증·재사용성 점검"
+    }
+  ]
+}
