@@ -1,0 +1,6 @@
+[flavor]
+dark = "catppuccin-mocha"
+light = "catppuccin-mocha"
+
+[app]
+overall = { bg = "#1e1e2e" }

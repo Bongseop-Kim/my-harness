@@ -1,0 +1,14 @@
+[[mgr.prepend_keymap]]
+on = "."
+run = "hidden toggle"
+desc = "Toggle hidden files"
+
+[[mgr.prepend_keymap]]
+on = [ "c", "c" ]
+run = 'shell -- printf "%s\n" "$@" | pbcopy'
+desc = "Copy selected paths to system clipboard"
+
+[[mgr.prepend_keymap]]
+on = [ "g", "i" ]
+run = "plugin lazygit"
+desc = "Open lazygit"

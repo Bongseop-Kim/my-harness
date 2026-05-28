@@ -1,0 +1,14 @@
+[flavor]
+dark = "catppuccin-latte"
+light = "catppuccin-latte"
+
+[app]
+overall = { bg = "#eff1f5" }
+
+[git]
+modified_sign  = "M "
+added_sign     = "A "
+deleted_sign   = "D "
+untracked_sign = "? "
+updated_sign   = "U "
+ignored_sign   = "! "
