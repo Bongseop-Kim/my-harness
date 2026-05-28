@@ -4,7 +4,7 @@
     "caveman": {
       "source": "github.com/JuliusBrussee/caveman/skills/caveman",
       "type": "github-subdir",
-      "installed_at": "2026-05-28T11:32:13.531177+09:00",
+      "installed_at": "2026-05-28T16:06:49.218514+09:00",
       "repo_url": "https://github.com/JuliusBrussee/caveman.git",
       "subdir": "skills/caveman",
       "version": "655b7d9",
@@ -17,10 +17,10 @@
     "cmux": {
       "source": "github.com/manaflow-ai/cmux/skills/cmux",
       "type": "github-subdir",
-      "installed_at": "2026-05-28T11:33:32.239517+09:00",
+      "installed_at": "2026-05-28T16:06:50.603862+09:00",
       "repo_url": "https://github.com/manaflow-ai/cmux.git",
       "subdir": "skills/cmux",
-      "version": "21b9fdc",
+      "version": "3244763",
       "tree_hash": "d7b4a428df22553048a6830f4b5f3733fe1f9393",
       "file_hashes": {
         "SKILL.md": "sha256:890e0ceb19923bff004d189cb499a7ed1356c6fbe18292edca48c7a092371393",
@@ -34,10 +34,10 @@
     "cmux-browser": {
       "source": "github.com/manaflow-ai/cmux/skills/cmux-browser",
       "type": "github-subdir",
-      "installed_at": "2026-05-28T11:33:47.211095+09:00",
+      "installed_at": "2026-05-28T16:06:52.115861+09:00",
       "repo_url": "https://github.com/manaflow-ai/cmux.git",
       "subdir": "skills/cmux-browser",
-      "version": "21b9fdc",
+      "version": "3244763",
       "tree_hash": "6d5dfc4de15faae37f932fa71f2bc9943bd2dafe",
       "file_hashes": {
         "SKILL.md": "sha256:3dea0af2946c156fc9be29fe438e33d3124e9811207b59d78b6033e03d269b74",
@@ -56,10 +56,10 @@
     "cmux-customization": {
       "source": "github.com/manaflow-ai/cmux/skills/cmux-customization",
       "type": "github-subdir",
-      "installed_at": "2026-05-28T11:34:17.480645+09:00",
+      "installed_at": "2026-05-28T16:06:53.444958+09:00",
       "repo_url": "https://github.com/manaflow-ai/cmux.git",
       "subdir": "skills/cmux-customization",
-      "version": "21b9fdc",
+      "version": "3244763",
       "tree_hash": "47bb4ea3d247fe634734674ec3d39e1224aed0e1",
       "file_hashes": {
         "SKILL.md": "sha256:8ed1c3435d36c2673565d5bfb9a45b4e82ea2c9bab1a708854d9f91673ce6450",
@@ -70,10 +70,10 @@
     "cmux-diagnostics": {
       "source": "github.com/manaflow-ai/cmux/skills/cmux-diagnostics",
       "type": "github-subdir",
-      "installed_at": "2026-05-28T11:34:11.170456+09:00",
+      "installed_at": "2026-05-28T16:06:54.796664+09:00",
       "repo_url": "https://github.com/manaflow-ai/cmux.git",
       "subdir": "skills/cmux-diagnostics",
-      "version": "21b9fdc",
+      "version": "3244763",
       "tree_hash": "bbcedcd6e38891c7a2c0493e397d2c3ddf3d8633",
       "file_hashes": {
         "SKILL.md": "sha256:315bab38550d5854a7529fdd2f6a2b0c7286e9fe2e688b292365b2eb74076891",
@@ -97,10 +97,10 @@
     "cmux-markdown": {
       "source": "github.com/manaflow-ai/cmux/skills/cmux-markdown",
       "type": "github-subdir",
-      "installed_at": "2026-05-28T11:33:53.109606+09:00",
+      "installed_at": "2026-05-28T16:06:59.055154+09:00",
       "repo_url": "https://github.com/manaflow-ai/cmux.git",
       "subdir": "skills/cmux-markdown",
-      "version": "21b9fdc",
+      "version": "3244763",
       "tree_hash": "c6cf70a1ad9f98867a652dc03ded80905c2706c8",
       "file_hashes": {
         "SKILL.md": "sha256:b5e5abbee4557bce296c51488d4b747bfd57c83d05a2a3faaaa5f531fd77d2a2",
@@ -112,15 +112,15 @@
     "cmux-settings": {
       "source": "github.com/manaflow-ai/cmux/skills/cmux-settings",
       "type": "github-subdir",
-      "installed_at": "2026-05-28T11:33:59.26391+09:00",
+      "installed_at": "2026-05-28T16:07:00.400817+09:00",
       "repo_url": "https://github.com/manaflow-ai/cmux.git",
       "subdir": "skills/cmux-settings",
-      "version": "21b9fdc",
-      "tree_hash": "7c3ee4ce0e05ea8178dadc28c25b16938f8be3f1",
+      "version": "3244763",
+      "tree_hash": "69a255e196c8b6caa0e86b364b2d70cd7be43ba5",
       "file_hashes": {
         "SKILL.md": "sha256:84b744c8ccc68a2cd5cfefa38faf0c5939bd69ef135ea4374b33d4f0234ef11f",
         "agents/openai.yaml": "sha256:3e6713f9c335147fbbcb04d3d50f3f994c97e915d4af2f315d8fb51f4a4f336f",
-        "references/all-keys.md": "sha256:83d2909450d804da5efb1f1465ee3cc4f64726e9c6039e99269fc27c568f6f07",
+        "references/all-keys.md": "sha256:45f616a013b22ed041cd9081711903787b2481a6ab01e5c87701141ab02f7c0e",
         "references/shortcut-actions.md": "sha256:1b174d2b29a18a0d1d608f2ac1b74d35462989534695dbdbd34db6713e90c640",
         "scripts/cmux-settings": "sha256:82555b970584c7072bb046ad4a4e02b81630d553e41dbda34d6710b0af843bb3"
       }
@@ -128,10 +128,10 @@
     "cmux-workspace": {
       "source": "github.com/manaflow-ai/cmux/skills/cmux-workspace",
       "type": "github-subdir",
-      "installed_at": "2026-05-28T11:34:05.080941+09:00",
+      "installed_at": "2026-05-28T16:07:02.628045+09:00",
       "repo_url": "https://github.com/manaflow-ai/cmux.git",
       "subdir": "skills/cmux-workspace",
-      "version": "21b9fdc",
+      "version": "3244763",
       "tree_hash": "b8a24863c44d8233c1c9ed760fe91876c8265321",
       "file_hashes": {
         "SKILL.md": "sha256:5f8c0b41951b0ac906167f16d015ca708c39fe878f27e504f322e237ca61ed12",
@@ -142,7 +142,7 @@
     "composition-patterns": {
       "source": "github.com/vercel-labs/agent-skills/skills/composition-patterns",
       "type": "github-subdir",
-      "installed_at": "2026-05-28T11:20:04.997701+09:00",
+      "installed_at": "2026-05-28T16:07:03.897562+09:00",
       "repo_url": "https://github.com/vercel-labs/agent-skills.git",
       "subdir": "skills/composition-patterns",
       "version": "1801156",
@@ -167,7 +167,7 @@
     "design-system-patterns": {
       "source": "github.com/wshobson/agents/plugins/ui-design/skills/design-system-patterns",
       "type": "github-subdir",
-      "installed_at": "2026-05-28T11:20:59.473898+09:00",
+      "installed_at": "2026-05-28T16:07:05.466248+09:00",
       "repo_url": "https://github.com/wshobson/agents.git",
       "subdir": "plugins/ui-design/skills/design-system-patterns",
       "version": "05231aa",
@@ -183,7 +183,7 @@
     "frontend-design": {
       "source": "github.com/anthropics/claude-code/plugins/frontend-design/skills/frontend-design",
       "type": "github-subdir",
-      "installed_at": "2026-05-28T11:39:27.1129+09:00",
+      "installed_at": "2026-05-28T16:07:07.210351+09:00",
       "repo_url": "https://github.com/anthropics/claude-code.git",
       "subdir": "plugins/frontend-design/skills/frontend-design",
       "version": "3bb4455",
@@ -195,7 +195,7 @@
     "karpathy-guidelines": {
       "source": "github.com/multica-ai/andrej-karpathy-skills/skills/karpathy-guidelines",
       "type": "github-subdir",
-      "installed_at": "2026-05-28T11:42:13.245906+09:00",
+      "installed_at": "2026-05-28T16:07:08.44465+09:00",
       "repo_url": "https://github.com/multica-ai/andrej-karpathy-skills.git",
       "subdir": "skills/karpathy-guidelines",
       "version": "2c60614",
@@ -207,7 +207,7 @@
     "react-best-practices": {
       "source": "github.com/vercel-labs/agent-skills/skills/react-best-practices",
       "type": "github-subdir",
-      "installed_at": "2026-05-28T10:46:46.914205+09:00",
+      "installed_at": "2026-05-28T16:07:10.012807+09:00",
       "repo_url": "https://github.com/vercel-labs/agent-skills.git",
       "subdir": "skills/react-best-practices",
       "version": "1801156",
@@ -294,10 +294,10 @@
     "react-doctor": {
       "source": "github.com/millionco/react-doctor/skills/react-doctor",
       "type": "github-subdir",
-      "installed_at": "2026-05-28T11:46:34.867972+09:00",
+      "installed_at": "2026-05-28T16:07:11.354567+09:00",
       "repo_url": "https://github.com/millionco/react-doctor.git",
       "subdir": "skills/react-doctor",
-      "version": "928f21c",
+      "version": "7ab5dbd",
       "tree_hash": "a0f9e68cf806ed5cc58b1ad2493b2e51d335c08b",
       "file_hashes": {
         "SKILL.md": "sha256:e1f696bcaa4841f00109cc1b3bbb2c3a2d059098fd6a815a1791e35e90480652"
@@ -306,7 +306,7 @@
     "react-native-best-practices": {
       "source": "github.com/callstackincubator/agent-skills/skills/react-native-best-practices",
       "type": "github-subdir",
-      "installed_at": "2026-05-28T11:48:28.976482+09:00",
+      "installed_at": "2026-05-28T16:07:13.167073+09:00",
       "repo_url": "https://github.com/callstackincubator/agent-skills.git",
       "subdir": "skills/react-native-best-practices",
       "version": "a5c8f21",
@@ -361,7 +361,7 @@
     "react-native-design": {
       "source": "github.com/wshobson/agents/plugins/ui-design/skills/react-native-design",
       "type": "github-subdir",
-      "installed_at": "2026-05-28T11:18:32.156553+09:00",
+      "installed_at": "2026-05-28T16:07:14.493171+09:00",
       "repo_url": "https://github.com/wshobson/agents.git",
       "subdir": "plugins/ui-design/skills/react-native-design",
       "version": "05231aa",
@@ -377,7 +377,7 @@
     "react-native-skills": {
       "source": "github.com/vercel-labs/agent-skills/skills/react-native-skills",
       "type": "github-subdir",
-      "installed_at": "2026-05-28T10:46:26.943269+09:00",
+      "installed_at": "2026-05-28T16:07:15.790343+09:00",
       "repo_url": "https://github.com/vercel-labs/agent-skills.git",
       "subdir": "skills/react-native-skills",
       "version": "1801156",
@@ -485,7 +485,7 @@
     "supabase": {
       "source": "github.com/supabase/agent-skills/skills/supabase",
       "type": "github-subdir",
-      "installed_at": "2026-05-28T11:50:02.659687+09:00",
+      "installed_at": "2026-05-28T16:07:17.094942+09:00",
       "repo_url": "https://github.com/supabase/agent-skills.git",
       "subdir": "skills/supabase",
       "version": "577e626",
@@ -499,7 +499,7 @@
     "supabase-postgres-best-practices": {
       "source": "github.com/supabase/agent-skills/skills/supabase-postgres-best-practices",
       "type": "github-subdir",
-      "installed_at": "2026-05-28T11:50:08.835634+09:00",
+      "installed_at": "2026-05-28T16:07:18.348557+09:00",
       "repo_url": "https://github.com/supabase/agent-skills.git",
       "subdir": "skills/supabase-postgres-best-practices",
       "version": "577e626",
@@ -545,7 +545,7 @@
     "web-component-design": {
       "source": "github.com/wshobson/agents/plugins/ui-design/skills/web-component-design",
       "type": "github-subdir",
-      "installed_at": "2026-05-28T11:20:46.330993+09:00",
+      "installed_at": "2026-05-28T16:07:19.57349+09:00",
       "repo_url": "https://github.com/wshobson/agents.git",
       "subdir": "plugins/ui-design/skills/web-component-design",
       "version": "05231aa",
@@ -560,7 +560,7 @@
     "web-design-guidelines": {
       "source": "github.com/vercel-labs/agent-skills/skills/web-design-guidelines",
       "type": "github-subdir",
-      "installed_at": "2026-05-28T10:46:56.425274+09:00",
+      "installed_at": "2026-05-28T16:07:20.869171+09:00",
       "repo_url": "https://github.com/vercel-labs/agent-skills.git",
       "subdir": "skills/web-design-guidelines",
       "version": "1801156",
