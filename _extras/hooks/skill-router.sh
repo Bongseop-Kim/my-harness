@@ -2,10 +2,10 @@
 # skill-router.sh — UserPromptSubmit hook
 #
 # 사용자 프롬프트의 키워드를 skill-rules.json 과 매칭해서
-# 활성화 권장 스킬 reminder 를 stdout (plain text) 으로 주입.
+# 활성화 권장 스킬 reminder 를 Codex UserPromptSubmit JSON 으로 주입.
 #
 # ⚠️ 안전망이지 방어선 아님. 매칭은 단순 키워드 substring.
-# ⚠️ Codex 호환: stdout plain text 만 사용 (hookSpecificOutput JSON 금지).
+# ⚠️ Codex 호환: stdout 은 UserPromptSubmit JSON 만 사용.
 
 set -uo pipefail
 trap 'exit 0' ERR
@@ -46,9 +46,14 @@ MATCHES="$(
   ' "$RULES_FILE" 2>/dev/null
 )"
 
-# 5. 매칭 결과를 plain text 로 stdout 출력 (Claude Code & Codex 모두 컨텍스트로 처리)
+# 5. 매칭 결과를 Codex UserPromptSubmit JSON 으로 출력
 if [[ -n "$MATCHES" ]]; then
-  printf '%s\n' "$MATCHES"
+  jq -n --arg context "$MATCHES" '{
+    hookSpecificOutput: {
+      hookEventName: "UserPromptSubmit",
+      additionalContext: $context
+    }
+  }'
 fi
 
 exit 0
