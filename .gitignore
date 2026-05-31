@@ -1,1 +1,6 @@
 .DS_Store
+
+# Tooling state
+.omc/
+.serena/
+skills/.metadata.json
