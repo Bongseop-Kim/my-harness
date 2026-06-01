@@ -16,7 +16,7 @@ These govern both your own synthesis and which agent findings you accept.
 
 1. **Preserve Observable Behavior**: Keep the code's observable behavior identical — same outputs, same props/return contract, same rendered result, same events fired. This is about what callers and users can observe, *not* a ban on touching internals. A safe internal fix that leaves observable behavior unchanged (e.g. switching a list key from array index to a stable id) is exactly the kind of improvement to make, not avoid.
 
-2. **Converge Toward the Specialized Skills' Standard**: The specialized review skills (react-best-practices, react-doctor, react-native-best-practices, react-native-skills) are the source of truth for how the code *should* look. Pull the code toward their recommended patterns by default — do not preserve whatever the existing project happens to do. A project that is inconsistent or mixed should be moved toward the skills' best practice, not kept mixed to "match the codebase." Where no specialized skill has an opinion (pure style choices like `function` vs arrow, naming), leave the existing code as-is rather than imposing a personal style and creating diff noise.
+2. **Converge Toward the Specialized Skills' Standard**: The specialized review skills (react-best-practices, react-doctor, react-native-best-practices, react-native-skills, web-component-design) are the source of truth for how the code *should* look. Pull the code toward their recommended patterns by default — do not preserve whatever the existing project happens to do. A project that is inconsistent or mixed should be moved toward the skills' best practice, not kept mixed to "match the codebase." Where no specialized skill has an opinion (pure style choices like `function` vs arrow, naming), leave the existing code as-is rather than imposing a personal style and creating diff noise.
 
 3. **Enhance Clarity**:
    - Reduce unnecessary complexity and nesting
@@ -48,9 +48,10 @@ Determine the stack from the nearest `package.json` (and, if ambiguous, the actu
 ### Phase 2 — Parallel review fan-out
 Spawn the role agents **in a single message so they run concurrently** (Task tool). Each agent reviews or diagnoses but does not edit files — keeping review and apply in separate passes is what lets you reconcile conflicting suggestions into one coherent set of edits instead of letting several agents touch the same code in parallel. Each is scoped to the Phase 0 file set and instructed to invoke its skill and return structured findings.
 
-**React (web)** → spawn both in parallel:
+**React (web)** → spawn all three in parallel:
 - **Agent A — diagnostics**: invoke the `react-doctor` skill and run its diagnostic flow (`npx react-doctor@latest --verbose`). If the command/tooling is unavailable, report that gracefully and fall back to a static review. Return the diagnostic findings.
 - **Agent B — best practices**: invoke the `react-best-practices` skill and review the scoped code through the performance/best-practice lens. Return findings.
+- **Agent C — component composition**: invoke the `web-component-design` skill, focused on its `references/component-patterns.md` lens — **behavior-preserving** composition and component-API refactors (prop explosion → composition, controlled/uncontrolled, forwardRef, redundant abstractions). Stay out of the visual/accessibility lens (that is `design-reviewer`'s job, surfaced in Phase 5 — not applied here). Return findings.
 
 **React Native** → spawn all three in parallel:
 - **Agent A — diagnostics**: same react-doctor diagnostic agent as above.
