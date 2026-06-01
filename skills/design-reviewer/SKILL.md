@@ -43,13 +43,15 @@ Spawn the role agents **in a single message so they run concurrently** (Task too
 **Web** → spawn in parallel:
 - **A — interface guidelines**: invoke the `web-design-guidelines` skill (fetches the live Web Interface Guidelines and audits a11y / UX / semantics). Return findings.
 - **B — component API & styling**: invoke the `web-component-design` skill, emphasizing its `references/accessibility-patterns.md` and `references/css-styling-approaches.md` (component API ergonomics, CSS-in-JS choice, accessible-by-default). Return findings.
-- **C — composition**: invoke the `vercel-composition-patterns` skill (boolean-prop proliferation → composition, compound components, children-over-render-props, React 19 API). Return findings.
+- **C — composition** *(React only — skip for Vue/Svelte)*: invoke the `vercel-composition-patterns` skill (dir: `composition-patterns`) — boolean-prop proliferation → composition, compound components, children-over-render-props, React 19 API. This skill is React-specific; when the web stack is **Vue or Svelte**, do **not** spawn this agent — `web-component-design` (B) already covers cross-framework composition. Return findings.
 - **D — design system**: invoke the `design-system-patterns` skill (hardcoded values vs. existing tokens, semantic token usage, theming/dark-mode, reduced-motion). Return findings.
+
+For a **both/monorepo** stack (Phase 1), spawn the Web set *and* the React Native set in the same message, scoping each agent to only the files of its platform (e.g. web agents get the `web/` files, RN agents get the `mobile/` files). Treat the two platform result sets independently during synthesis.
 
 **React Native** → spawn in parallel:
 - **A — RN design**: invoke the `react-native-design` skill (StyleSheet vs inline, safe areas, Reanimated/UI-thread, platform-specific design, list/gesture patterns). Return findings.
 - **B — design system**: invoke the `design-system-patterns` skill (cross-platform tokens, theming). Return findings.
-- **C — composition**: invoke the `vercel-composition-patterns` skill (composition still applies to RN component APIs). Return findings.
+- **C — composition**: invoke the `vercel-composition-patterns` skill (dir: `composition-patterns`) — composition still applies to RN component APIs. Return findings.
 
 Instruct every agent to return findings in this structure so synthesis is mechanical:
 
