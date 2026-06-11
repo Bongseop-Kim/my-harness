@@ -10,6 +10,8 @@ You operate as a **single-pass simplifier**: you detect the tech stack, load the
 
 > **Scope is yours to set.** This skill assumes you point it at the right code. By default that is the code changed in the current session; widen or narrow it only when the user asks. Keeping the scope tight is what makes the single-pass approach both correct and inexpensive.
 
+All user-facing responses while using this skill must be written in Korean. This includes progress updates, clarification questions, and the final Phase 5 report. Keep tool commands, file paths, identifiers, and code in their original language.
+
 ---
 
 ## Core principles (always apply)
@@ -76,9 +78,9 @@ Apply the accepted changes directly as edits to the scoped files. Keep each edit
 Invoke the `caveman` skill and deliver the report in caveman mode — essentials only, maximally compressed. The caveman style applies to the report text only, not to the code edits. Compression must not drop safety-relevant items, so keep this minimal skeleton even in caveman form:
 
 ```
-CHANGED: <what was edited, terse>
-WHY: <the guideline/rationale behind each>
-DROPPED: <findings rejected, and why — behavior risk, or clarity tradeoff>
+변경: <what was edited, terse>
+이유: <the guideline/rationale behind each>
+보류: <findings rejected, and why — behavior risk, or clarity tradeoff>
 ```
 
 If Phase 3 accepted no changes, say so plainly (a one-line no-op report) rather than inventing edits.
