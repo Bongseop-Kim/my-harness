@@ -1,124 +1,48 @@
 ---
 name: git-commit
-description: 'Execute git commit with conventional commit message analysis, intelligent staging, and message generation. Use when user asks to commit changes, create a git commit, or mentions "/commit". Supports: (1) Auto-detecting type and scope from changes, (2) Generating conventional commit messages from diff, (3) Interactive commit with optional type/scope/description overrides, (4) Intelligent file staging for logical grouping'
+description: 'Fast git commit with conventional commit message. Speed is the only goal — minimal diff analysis, no deep code understanding, single-line message, immediate execution. Use when user asks to commit changes, create a git commit, or mentions "/commit".'
 license: MIT
 allowed-tools: Bash
 ---
 
-# Git Commit with Conventional Commits
+# Fast Git Commit
 
-## Overview
+## Goal
 
-Create standardized, semantic git commits using the Conventional Commits specification. Analyze the actual diff to determine appropriate type, scope, and message.
+**Speed only.** Do NOT deeply analyze code. Do NOT read files. Generate a good-enough conventional commit message from minimal context and commit immediately. No questions, no confirmation, no extra passes.
 
-## Conventional Commit Format
+## Workflow (2 commands total)
 
-```
-<type>[optional scope]: <description>
-
-[optional body]
-
-[optional footer(s)]
-```
-
-## Commit Types
-
-| Type       | Purpose                        |
-| ---------- | ------------------------------ |
-| `feat`     | New feature                    |
-| `fix`      | Bug fix                        |
-| `docs`     | Documentation only             |
-| `style`    | Formatting/style (no logic)    |
-| `refactor` | Code refactor (no feature/fix) |
-| `perf`     | Performance improvement        |
-| `test`     | Add/update tests               |
-| `build`    | Build system/dependencies      |
-| `ci`       | CI/config changes              |
-| `chore`    | Maintenance/misc               |
-| `revert`   | Revert commit                  |
-
-## Breaking Changes
-
-```
-# Exclamation mark after type/scope
-feat!: remove deprecated endpoint
-
-# BREAKING CHANGE footer
-feat: allow config to extend other configs
-
-BREAKING CHANGE: `extends` key behavior changed
-```
-
-## Workflow
-
-### 1. Analyze Diff
+### 1. One combined look (single Bash call)
 
 ```bash
-# If files are staged, use staged diff
-git diff --staged
-
-# If nothing staged, use working tree diff
-git diff
-
-# Also check status
-git status --porcelain
+git status --porcelain && git diff --stat HEAD && git diff HEAD | head -200
 ```
 
-### 2. Stage Files (if needed)
+- File names + stat are usually enough to pick type/scope. Only skim the truncated diff if the type is unclear.
+- Never run a full `git diff` without truncation. Never inspect file contents beyond this.
 
-If nothing is staged or you want to group changes differently:
+### 2. Stage + commit (single Bash call)
 
 ```bash
-# Stage specific files
-git add path/to/file1 path/to/file2
-
-# Stage by pattern
-git add *.test.*
-git add src/components/*
-
-# Interactive staging
-git add -p
+git add <changed files by name> && git commit -m "<type>(<scope>): <description>"
 ```
 
-**Never commit secrets** (.env, credentials.json, private keys).
+- If files are already staged, commit only those — skip `git add`.
+- If nothing is staged, stage ALL changed files by name in one `git add` (do not split into multiple logical commits — one commit, done).
+- Skip `.env`, `credentials.json`, `*.pem`, key files when staging.
 
-### 3. Generate Commit Message
+## Message Rules
 
-Analyze the diff to determine:
+- Format: `<type>(<scope>): <description>` — single line only. No body, no footer, unless the user explicitly asks.
+- Types: `feat` `fix` `docs` `style` `refactor` `perf` `test` `build` `ci` `chore` `revert`
+- Scope: top-level directory or module name from the file paths. Omit if mixed/unclear — don't deliberate.
+- Description: present tense, imperative, <72 chars.
+- When type is ambiguous between two options, pick the more likely one and move on. Never ask the user.
 
-- **Type**: What kind of change is this?
-- **Scope**: What area/module is affected?
-- **Description**: One-line summary of what changed (present tense, imperative mood, <72 chars)
+## Hard Rules
 
-### 4. Execute Commit
-
-```bash
-# Single line
-git commit -m "<type>[scope]: <description>"
-
-# Multi-line with body/footer
-git commit -m "$(cat <<'EOF'
-<type>[scope]: <description>
-
-<optional body>
-
-<optional footer>
-EOF
-)"
-```
-
-## Best Practices
-
-- One logical change per commit
-- Present tense: "add" not "added"
-- Imperative mood: "fix bug" not "fixes bug"
-- Reference issues: `Closes #123`, `Refs #456`
-- Keep description under 72 characters
-
-## Git Safety Protocol
-
-- NEVER update git config
-- NEVER run destructive commands (--force, hard reset) without explicit request
-- NEVER skip hooks (--no-verify) unless user asks
-- NEVER force push to main/master
-- If commit fails due to hooks, fix and create NEW commit (don't amend)
+- Max 2 Bash calls in the happy path. No Read/Grep/exploration tools.
+- NEVER update git config, force push, hard reset, or skip hooks (--no-verify).
+- If a pre-commit hook fails: fix minimally, re-stage, create a NEW commit (never --amend).
+- Do not push unless asked.
