@@ -24,11 +24,6 @@
       "skill": "composition-patterns",
       "patterns": ["컴포넌트 설계", "boolean prop", "render prop", "compound", "HOC", "재사용 컴포넌트"],
       "reminder": "React 컴포넌트 설계 — composition-patterns 스킬로 boolean prop 폭증·재사용성 점검"
-    },
-    {
-      "skill": "caveman",
-      "patterns": ["."],
-      "reminder": "[동굴 모드] 모든 응답을 군더더기 없이 압축해 답하라. 인사말·사과·맞장구·헤지(~인 것 같습니다→~임)·군더더기 부사 제거, 문장 조각 허용. 코드·명령·식별자·에러·경로는 원문 그대로. 보안 경고·되돌릴 수 없는 작업·다단계 절차·사용자 혼란 시엔 정상 문체. 전체 규칙은 caveman 스킬 참조."
     }
   ]
 }
