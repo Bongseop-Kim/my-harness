@@ -2,10 +2,18 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 
--- React/RN 표준 2스페이스 인덴트
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 2
-vim.opt.shiftwidth = 2
+-- 줄바꿈
+vim.opt.wrap = true
+vim.opt.linebreak = true
+vim.opt.breakindent = true
+
+-- 4스페이스 인덴트
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+
+-- 줄번호
+vim.opt.number = true
 
 -- 키보드 이동 효율을 위한 상대 줄번호
 vim.opt.relativenumber = true
