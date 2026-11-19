@@ -19,6 +19,7 @@ link "$REPO/zshrc" "$HOME/.zshrc"
 for name in ghostty nvim yazi zsh-functions; do
   link "$REPO/extras/$name" "$HOME/.config/$name"
 done
+link "$REPO/extras/warp/themes" "$HOME/.warp/themes"
 for tool in .claude .codex; do
   link "$REPO/extras/hooks" "$HOME/$tool/hooks"
   for skill in "$REPO"/skills/*/; do
