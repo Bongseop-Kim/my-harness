@@ -2,4 +2,9 @@ font-family = D2CodingLigature Nerd Font Mono
 font-size = 18
 adjust-cell-height = 6%
 
-theme = Catppuccin Latte
+theme = light:Catppuccin Latte,dark:Catppuccin Mocha
+
+window-save-state = always
+copy-on-select = clipboard
+macos-titlebar-style = tabs
+unfocused-split-opacity = 0.85
